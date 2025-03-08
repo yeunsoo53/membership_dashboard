@@ -27,6 +27,20 @@ class CommitteeDivision(enum.Enum):
     INTERNAL = "Internal"
     OPERATIONS = "Operations"
 
+class PositionTitle(enum.Enum):
+    MEMBER = "Member"
+    COORDINATOR = "Coordinator"
+    PROJECT_DEVELOPER = "Project Developer"
+    CHAIR = "Chair"
+    VP = "Vice President"
+    PRESIDENT = "President"
+    EXEC_SEC = "Executive Secretary"
+
+class PositionLevel(enum.Enum):
+    GC = "General Council"
+    EC = "Executive Council"
+    EB = "Executive Board"
+
 Base = declarative_base()
 
 # Recruitment system models
@@ -127,10 +141,9 @@ class Committee(Base):
 class Position(Base):
     __tablename__ = "position"
     
-    position_id = Column(Integer, primary_key=True)
-    title = Column(String(255), nullable=False)
-    level = Column(String(255), nullable=False)
-    is_coordinator = Column(Boolean, nullable=False)
+    position_id = Column(Integer, primary_key=True, autoincrement=True)
+    title = Column(Enum(PositionTitle), nullable=False)
+    level = Column(Enum(PositionLevel), nullable=False)
     
     # Relationships
     member_history = relationship("MemberHistory", back_populates="position")

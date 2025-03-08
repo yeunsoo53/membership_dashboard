@@ -17,6 +17,7 @@ class BaseImporter(ABC):
         self.logger = logging.getLogger(f'db_population.{self.__class__.__name__}')
 
     @abstractmethod
+    #abstractmethod bascially says that any non-abstract class that inherits from this class must implement this method
     def import_data(self, data_file):
         """
         Import data from file to database
