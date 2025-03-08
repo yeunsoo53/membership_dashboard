@@ -1,6 +1,31 @@
-from sqlalchemy import Column, Integer, String, Boolean, Text, Date, DateTime, ForeignKey, create_engine
+from sqlalchemy import Column, Integer, String, Boolean, Text, Date, DateTime, ForeignKey, Enum
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship, sessionmaker
+from sqlalchemy.orm import relationship
+import enum
+
+class CommitteeName(enum.Enum):
+    CAREER_FAIR = "Career Fair"
+    CORPORATE = "Corporate Relations"
+    ENG_DEV = "Engineering Development"
+    FINANCE = "Finance"
+    PROTRIP = "ProTrip"
+    EWEEK = "EWeek"
+    ENVISION = "Envision"
+    PHILANTHROPY = "Philanthropy"
+    SPECIAL_EVENTS = "Special Events"
+    LEGISLATION = "Legislation"
+    SAGR = "Society and Graduate Relations"
+    STUDENT_RELATIONS = "Student Relations"
+    IR = "Internal Relations"
+    MARKETING = "Marketing"
+    SYSAD = "Systems Administration"
+    MEMBERSHIP = "Membership"
+
+class CommitteeDivision(enum.Enum):
+    DEVELOPMENT = "Development"
+    EXTERNAL = "External"
+    INTERNAL = "Internal"
+    OPERATIONS = "Operations"
 
 Base = declarative_base()
 
@@ -91,8 +116,8 @@ class Committee(Base):
     __tablename__ = "committee"
     
     committee_id = Column(Integer, primary_key=True)
-    name = Column(String(255))
-    division = Column(String(255))
+    name = Column(Enum(CommitteeName), nullable=True)
+    division = Column(Enum(CommitteeDivision), nullable=True)
     
     # Relationships
     member_history = relationship("MemberHistory", back_populates="committee")
