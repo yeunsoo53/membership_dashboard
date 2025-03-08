@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker
 DB_USER = "postgres"
 DB_PASSWORD = "qlcthrma53/Pos"
 DB_HOST = "localhost"
-DB_NAME = "your_database"
+DB_NAME = "membership_dashboard"
 DB_PORT = "5433"
 
 # Create connection string

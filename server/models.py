@@ -115,7 +115,7 @@ class Application(Base):
 class Committee(Base):
     __tablename__ = "committee"
     
-    committee_id = Column(Integer, primary_key=True)
+    committee_id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(255), nullable=False)
     division = Column(Enum(CommitteeDivision), nullable=False)
     

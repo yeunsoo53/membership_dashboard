@@ -42,12 +42,12 @@ class CommitteeImporter(BaseImporter):
                     self.session.commit()
                     self.logger.info(f"Sucessfully committed {imported_count} committee records")
                 except Exception as e:
-                    self.session.error(f"Error committing committee data: {e}")
+                    self.logger.error(f"Error committing committee data: {e}")
                     return False
 
-            self.logger.info(f"Committee import summary: {imported_count} imported, {skipped_count} skipped, {error_count} errors out o f{total_records} total")
+            self.logger.info(f"Committee import summary: {imported_count} imported, {skipped_count} skipped, {error_count} errors out of {total_records} total")
 
-            return imported_count > 0
+        return imported_count > 0
 
     def _validate_committee_data(self, item):
         """
