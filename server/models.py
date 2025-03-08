@@ -116,8 +116,8 @@ class Committee(Base):
     __tablename__ = "committee"
     
     committee_id = Column(Integer, primary_key=True)
-    name = Column(Enum(CommitteeName), nullable=True)
-    division = Column(Enum(CommitteeDivision), nullable=True)
+    name = Column(String(255), nullable=False)
+    division = Column(Enum(CommitteeDivision), nullable=False)
     
     # Relationships
     member_history = relationship("MemberHistory", back_populates="committee")
