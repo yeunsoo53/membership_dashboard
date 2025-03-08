@@ -1,4 +1,18 @@
 [
-    {"name": "Career Fair", "division": "Development"}
-    
+    {"name": "Career Fair", "division": "Development"},
+    {"name": "Corporate Relations", "division": "Development"},
+    {"name": "Engineering Development", "division": "Development"},
+    {"name": "Finance", "division": "Development"},
+    {"name": "ProTrip", "division": "Development"},
+    {"name": "Envision", "division": "External"},
+    {"name": "Eweek", "division": "External"},
+    {"name": "Philanthropy", "division": "External"},
+    {"name": "Special Events", "division": "External"},
+    {"name": "Legislation", "division": "Internal"},
+    {"name": "Student and Graduate Relations", "division": "Internal"},
+    {"name": "Student Relations", "division": "Internal"},
+    {"name": "Internal Relations", "division": "Operations"},
+    {"name": "Marketing", "division": "Operations"},
+    {"name": "Membership", "division": "Operations"},
+    {"name": "Systems Administration", "division": "Operations"}
 ]
