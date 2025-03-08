@@ -1,0 +1,23 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5433,
+      "driver": "PostgreSQL",
+      "name": "localhost",
+      "database": "membership_dashboard",
+      "username": "postgres"
+    },
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5433,
+      "driver": "PostgreSQL",
+      "name": "membership_dashboard",
+      "database": "membership_dashboard",
+      "username": "postgres",
+      "password": "qlcthrma53/Pos"
+    }
+  ]
+}
