@@ -27,15 +27,6 @@ class CommitteeDivision(enum.Enum):
     INTERNAL = "Internal"
     OPERATIONS = "Operations"
 
-class PositionTitle(enum.Enum):
-    MEMBER = "Member"
-    COORDINATOR = "Coordinator"
-    PROJECT_DEVELOPER = "Project Developer"
-    CHAIR = "Chair"
-    VP = "Vice President"
-    PRESIDENT = "President"
-    EXEC_SEC = "Executive Secretary"
-
 class PositionLevel(enum.Enum):
     GC = "General Council"
     EC = "Executive Council"
@@ -142,7 +133,7 @@ class Position(Base):
     __tablename__ = "position"
     
     position_id = Column(Integer, primary_key=True, autoincrement=True)
-    title = Column(Enum(PositionTitle), nullable=False)
+    title = Column(String(255), nullable=False)
     level = Column(Enum(PositionLevel), nullable=False)
     
     # Relationships
@@ -155,6 +146,7 @@ class Meeting(Base):
     title = Column(String(255), nullable=False)
     description = Column(Text, nullable=False)
     date = Column(Date, nullable=False)
+    location = Column(String(255), nullable=False)
     
     # Relationships
     attendance = relationship("MeetingAttendance", back_populates="meeting")

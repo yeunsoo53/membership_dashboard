@@ -2,8 +2,7 @@ import os, sys, logging, argparse
 from datetime import datetime
 from sqlalchemy.orm import Session
 
-from db_config import engine, SessionLocal, get_db
-from models import Base
+from db_config import get_db
 from importers import IMPORT_ORDER
 
 def setup_logging(log_dir="logs"):
@@ -71,7 +70,8 @@ def main():
     
     #map of importer classes to datafiles
     data_files = {
-        'CommitteeImporter': os.path.join(args.data_dir, "committee.json")
+        'CommitteeImporter': os.path.join(args.data_dir, "committee.json"),
+        'PositionImporter': os.path.join(args.data_dir, "position.json")
     }
 
     #track success
@@ -80,6 +80,10 @@ def main():
 
     #run importers in specific order
     importers_to_run = IMPORT_ORDER
+
+    logger.info(f"Python path: {sys.path}")
+    logger.info(f"Looking for importer: {args.specific_importer}")
+    logger.info(f"Available importers: {[imp.__name__ for imp in IMPORT_ORDER]}")
 
     #if specific importer was requested, filter to just that one
     if args.specific_importer:

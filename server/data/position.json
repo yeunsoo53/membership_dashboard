@@ -1,0 +1,9 @@
+[
+    {"title": "Member", "level": "GC"},
+    {"title": "Coordinator", "level": "GC"},
+    {"title": "Project Developer", "level": "GC"},
+    {"title": "Chair", "level": "EC"},
+    {"title": "Vice President", "level": "EB"},
+    {"title": "President", "level": "EB"},
+    {"title": "Executive Secretary", "level": "EB"}
+]
