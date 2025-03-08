@@ -71,7 +71,8 @@ def main():
     #map of importer classes to datafiles
     data_files = {
         'CommitteeImporter': os.path.join(args.data_dir, "committee.json"),
-        'PositionImporter': os.path.join(args.data_dir, "position.json")
+        'PositionImporter': os.path.join(args.data_dir, "position.json"),
+        'MeetingImporter': os.path.join(args.data_dir, "meeting.csv")
     }
 
     #track success
