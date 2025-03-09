@@ -60,13 +60,12 @@ class Applicant(Base):
     __tablename__ = "applicant"
     
     applicant_id = Column(Integer, primary_key=True)
-    first_name = Column(String(255), nullable=False)
-    last_name = Column(String(255), nullable=False)
+    uin = Column(String(255), nullable=False)
     email = Column(String(255), nullable=False)
     major = Column(String(255), nullable=False)
     grad_sem = Column(String(255), nullable=False)
     grad_year = Column(Integer, nullable=False)
-    recruitment_id = Column(Integer, ForeignKey("recruitment_cycle.cycle_id"), nullable=False)
+    cycle_id = Column(Integer, ForeignKey("recruitment_cycle.cycle_id"), nullable=False)
     admission = Column(Boolean, nullable=False)
     
     # Relationships
@@ -167,7 +166,7 @@ class InterviewQuestion(Base):
 class Committee(Base):
     __tablename__ = "committee"
     
-    committee_id = Column(Integer, primary_key=True, autoincrement=True)
+    committee_id = Column(Integer, primary_key=True)
     name = Column(String(255), nullable=False)
     division = Column(Enum(CommitteeDivision), nullable=False)
     
@@ -242,6 +241,8 @@ class Member(Base):
     
     member_id = Column(Integer, primary_key=True)
     applicant_id = Column(Integer, ForeignKey("applicant.applicant_id"), nullable=False)
+    first_name = Column(String(255), nullable=False)
+    last_name = Column(String(255), nullable=False)
     phone = Column(String(255), nullable=False)
     cohort_sem = Column(String(255), nullable=False)
     cohort_year = Column(Integer, nullable=False)
