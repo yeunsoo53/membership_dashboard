@@ -1,7 +1,5 @@
 import os, sys, logging, argparse
 from datetime import datetime
-from sqlalchemy.orm import Session
-
 from db_config import get_db
 from importers import IMPORT_ORDER
 
@@ -72,7 +70,8 @@ def main():
     data_files = {
         'CommitteeImporter': os.path.join(args.data_dir, "committee.json"),
         'PositionImporter': os.path.join(args.data_dir, "position.json"),
-        'MeetingImporter': os.path.join(args.data_dir, "meeting.csv")
+        'MeetingImporter': os.path.join(args.data_dir, "meeting.csv"),
+        'RecruitmentCycleImporter': os.path.join(args.data_dir, "recruitment_cycle.json")
     }
 
     #track success

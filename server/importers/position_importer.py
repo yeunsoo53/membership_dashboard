@@ -37,15 +37,15 @@ class PositionImporter(BaseImporter):
             else:
                 error_count += 1
 
-            if imported_count > 0:
-                try:
-                    self.session.commit()
-                    self.logger.info(f"Sucessfully committed {imported_count} position records")
-                except Exception as e:
-                    self.logger.error(f"Error committing position data: {e}")
-                    return False
+        if imported_count > 0:
+            try:
+                self.session.commit()
+                self.logger.info(f"Successfully committed {imported_count} position records")
+            except Exception as e:
+                self.logger.error(f"Error committing position data: {e}")
+                return False
 
-            self.logger.info(f"Position import summary: {imported_count} imported, {skipped_count} skipped, {error_count} errors out of {total_records} total")
+        self.logger.info(f"Position import summary: {imported_count} imported, {skipped_count} skipped, {error_count} errors out of {total_records} total")
 
         return imported_count > 0
 
