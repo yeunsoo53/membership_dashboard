@@ -71,7 +71,6 @@ class Applicant(Base):
     
     # Relationships
     recruitment_cycle = relationship("RecruitmentCycle", back_populates="applicants")
-    applications = relationship("Application", back_populates="applicant")
     app_responses = relationship("AppResponse", back_populates="applicant")
     review_assignments = relationship("ReviewAssignment", back_populates="applicant")
     interviews = relationship("Interview", back_populates="applicant")

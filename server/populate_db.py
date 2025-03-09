@@ -72,7 +72,8 @@ def main():
         'PositionImporter': os.path.join(args.data_dir, "position.json"),
         'MeetingImporter': os.path.join(args.data_dir, "meeting.csv"),
         'RecruitmentCycleImporter': os.path.join(args.data_dir, "recruitment_cycle.json"),
-        'QuestionImporter': os.path.join(args.data_dir, "question.json")
+        'QuestionImporter': os.path.join(args.data_dir, "question.json"),
+        'ApplicationImporter': os.path.join(args.data_dir, "application.json")
     }
 
     #track success
