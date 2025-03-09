@@ -32,6 +32,14 @@ class PositionLevel(enum.Enum):
     EC = "Executive Council"
     EB = "Executive Board"
 
+class QuestionType(enum.Enum):
+    APPLICATION = "application"
+    INTERVIEW = "interview"
+
+class QuestionAudience(enum.Enum):
+    MEMBER = "member"
+    NON_MEMBER = "non_member"
+
 Base = declarative_base()
 
 # Recruitment system models
@@ -45,9 +53,7 @@ class RecruitmentCycle(Base):
     # Relationships
     applicants = relationship("Applicant", back_populates="recruitment_cycle")
     applications = relationship("Application", back_populates="cycle")
-    app_questions = relationship("AppQuestion", back_populates="cycle")
     interviews = relationship("Interview", back_populates="cycle")
-    interview_questions = relationship("InterviewQuestion", back_populates="cycle")
     reviewers = relationship("Reviewer", back_populates="cycle")
 
 class Applicant(Base):
@@ -71,32 +77,47 @@ class Applicant(Base):
     interviews = relationship("Interview", back_populates="applicant")
     member = relationship("Member", back_populates="applicant", uselist=False)
 
-class AppQuestion(Base):
-    __tablename__ = "app_question"
-    
-    app_question_id = Column(Integer, primary_key=True)
-    cycle_id = Column(Integer, ForeignKey("recruitment_cycle.cycle_id"), nullable=False)
-    question_text = Column(Text, nullable=False)
-    max_score = Column(Integer, nullable=False)
+class Question(Base):
+    __tablename__ = "question"
+
+    question_id = Column(Integer, primary_key=True, autoincrement=True)
+    text = Column(Text, nullable=False)
+    type = Column(Enum(QuestionType), nullable=False)
+    audience = Column(Enum(QuestionAudience), nullable=False)
+    word_limit = Column(Integer, nullable=True)
+    max_score = Column(Integer, nullable=True)
     required = Column(Boolean, nullable=False)
-    
+
     # Relationships
-    cycle = relationship("RecruitmentCycle", back_populates="app_questions")
-    responses = relationship("AppResponse", back_populates="question")
-    scores = relationship("AppQuestionScore", back_populates="question")
+    application_questions = relationship("ApplicationQuestion", back_populates="question")
+    interview_questions = relationship("InterviewQuestion", back_populates="question")
+
+# class AppQuestion(Base):
+#     __tablename__ = "app_question"
+    
+#     app_question_id = Column(Integer, primary_key=True)
+#     cycle_id = Column(Integer, ForeignKey("recruitment_cycle.cycle_id"), nullable=False)
+#     question_text = Column(Text, nullable=False)
+#     max_score = Column(Integer, nullable=False)
+#     required = Column(Boolean, nullable=False)
+    
+#     # Relationships
+#     cycle = relationship("RecruitmentCycle", back_populates="app_questions")
+#     responses = relationship("AppResponse", back_populates="question")
+#     scores = relationship("AppQuestionScore", back_populates="question")
 
 class AppResponse(Base):
     __tablename__ = "app_response"
     
     app_response_id = Column(Integer, primary_key=True)
     applicant_id = Column(Integer, ForeignKey("applicant.applicant_id"), nullable=False)
-    question_id = Column(Integer, ForeignKey("app_question.app_question_id"), nullable=False)
+    application_question_id = Column(Integer, ForeignKey("application_question.application_question_id"), nullable=False)
     response_text = Column(Text, nullable=False)
     submission_date = Column(DateTime, nullable=False)
     
     # Relationships
     applicant = relationship("Applicant", back_populates="app_responses")
-    question = relationship("AppQuestion", back_populates="responses")
+    application_question = relationship("ApplicationQuestion", back_populates="responses")
     scores = relationship("AppQuestionScore", back_populates="response")
 
 class Application(Base):
@@ -104,6 +125,7 @@ class Application(Base):
     
     app_id = Column(Integer, primary_key=True)
     applicant_id = Column(Integer, ForeignKey("applicant.applicant_id"), nullable=False)
+    title = Column(String(255), nullable=False)
     active = Column(Boolean, nullable=False)
     created_time = Column(DateTime, nullable=False)
     closed_time = Column(DateTime, nullable=False)
@@ -115,6 +137,34 @@ class Application(Base):
     cycle = relationship("RecruitmentCycle", back_populates="applications")
     reviews = relationship("AppReview", back_populates="application")
     interviews = relationship("Interview", back_populates="application")
+    questions = relationship("ApplicationQuestion", back_populates="application")
+
+class ApplicationQuestion(Base):
+    __tablename__ = "application_question"
+    
+    application_question_id = Column(Integer, primary_key=True)
+    app_id = Column(Integer, ForeignKey("application.app_id"), nullable=False)
+    question_id = Column(Integer, ForeignKey("question.question_id"), nullable=False)
+    display_order = Column(Integer, nullable=False, default=0)
+    
+    # Relationships
+    application = relationship("Application", back_populates="questions")
+    question = relationship("Question", back_populates="application_questions")
+    responses = relationship("AppResponse", back_populates="application_question")
+    scores = relationship("AppQuestionScore", back_populates="application_question")
+
+class InterviewQuestion(Base):
+    __tablename__ = "interview_question"
+    
+    interview_question_id = Column(Integer, primary_key=True)
+    interview_id = Column(Integer, ForeignKey("interview.interview_id"), nullable=False)
+    question_id = Column(Integer, ForeignKey("question.question_id"), nullable=False)
+    display_order = Column(Integer, nullable=False, default=0)
+    
+    # Relationships
+    interview = relationship("Interview", back_populates="questions")
+    question = relationship("Question", back_populates="interview_questions")
+    scores = relationship("InterviewScore", back_populates="interview_question")
 
 # Committee and Position models (no foreign key dependencies)
 class Committee(Base):
@@ -362,14 +412,14 @@ class AppQuestionScore(Base):
     
     app_question_score_id = Column(Integer, primary_key=True)
     assignment_id = Column(Integer, ForeignKey("review_assignment.assignment_id"), nullable=False)
-    question_id = Column(Integer, ForeignKey("app_question.app_question_id"), nullable=False)
+    application_question_id = Column(Integer, ForeignKey("application_question.application_question_id"), nullable=False)
     response_id = Column(Integer, ForeignKey("app_response.app_response_id"), nullable=False)
     score = Column(Integer, nullable=False)
     comments = Column(Text, nullable=False)
     
     # Relationships
     assignment = relationship("ReviewAssignment", back_populates="question_scores")
-    question = relationship("AppQuestion", back_populates="scores")
+    application_question = relationship("ApplicationQuestion", back_populates="scores")
     response = relationship("AppResponse", back_populates="scores")
 
 class AppReview(Base):
@@ -391,6 +441,7 @@ class Interview(Base):
     cycle_id = Column(Integer, ForeignKey("recruitment_cycle.cycle_id"), nullable=False)
     app_id = Column(Integer, ForeignKey("application.app_id"), nullable=False)
     applicant_id = Column(Integer, ForeignKey("applicant.applicant_id"), nullable=False)
+    title = Column(String(255), nullable=False)
     overall_score = Column(Integer, nullable=False)
     decision = Column(String(255), nullable=False)
     comments = Column(Text, nullable=False)
@@ -399,18 +450,8 @@ class Interview(Base):
     cycle = relationship("RecruitmentCycle", back_populates="interviews")
     application = relationship("Application", back_populates="interviews")
     applicant = relationship("Applicant", back_populates="interviews")
+    questions = relationship("InterviewQuestion", back_populates="interview")
     scores = relationship("InterviewScore", back_populates="interview")
-
-class InterviewQuestion(Base):
-    __tablename__ = "interview_question"
-    
-    interview_question_id = Column(Integer, primary_key=True)
-    cycle_id = Column(Integer, ForeignKey("recruitment_cycle.cycle_id"), nullable=False)
-    question_text = Column(Text, nullable=False)
-    max_score = Column(Integer, nullable=False)
-    
-    # Relationships
-    cycle = relationship("RecruitmentCycle", back_populates="interview_questions")
 
 class InterviewScore(Base):
     __tablename__ = "interview_score"
@@ -418,11 +459,14 @@ class InterviewScore(Base):
     interview_score_id = Column(Integer, primary_key=True)
     interview_id = Column(Integer, ForeignKey("interview.interview_id"), nullable=False)
     reviewer_id = Column(Integer, ForeignKey("reviewer.reviewer_id"), nullable=False)
+    interview_question_id = Column(Integer, ForeignKey("interview_question.interview_question_id"), nullable=False)
     score = Column(Integer, nullable=False)
+    comments = Column(Text, nullable=True)
     
     # Relationships
     interview = relationship("Interview", back_populates="scores")
     reviewer = relationship("Reviewer", back_populates="interview_scores")
+    interview_question = relationship("InterviewQuestion", back_populates="scores")
 
 # Database connection code (optional)
 # def init_db(db_url="postgresql://username:password@localhost:5432/membership_dashboard"):
