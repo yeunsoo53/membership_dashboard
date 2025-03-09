@@ -1,0 +1,560 @@
+[
+    {
+      "text": "Why are you applying to join the SEC? How would your personal ambitions advance the mission of the SEC?",
+      "type": "application",
+      "audience": "non_member",
+      "word_limit": 200,
+      "max_score": null,
+      "required": true,
+      "cycles": ["F19", "S20", "F20", "S21"]
+    },
+    {
+      "text": "In what ways do you believe you embody the SEC mission statement (please use specific examples)?",
+      "type": "application",
+      "audience": "non_member",
+      "word_limit": 150,
+      "max_score": null,
+      "required": true,
+      "cycle": ["F19", "S20"]
+    },
+    {
+      "text": "Describe a time that you were faced with a difficult academic or extracurricular challenge, and explain how you handled it and what you learned.",
+      "type": "application",
+      "audience": "non_member",
+      "word_limit": 200,
+      "max_score": null,
+      "required": true,
+      "cycle": ["F19", "S20", "F20", "S21"]
+    },
+    {
+      "text": "What improvements could be made to the College of Engineering, and how would you like to see SEC contribute to this improvement (please be specific)?",
+      "type": "application",
+      "audience": "non_member",
+      "word_limit": 150,
+      "max_score": null,
+      "required": true,
+      "cycle": ["F19", "S20", "F20", "S21"]
+    },
+    {
+      "text": "Describe a notable accomplishment of yours, and in retrospect, how would you improve on it?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": null,
+      "required": true,
+      "cycle": ["F19", "S20"]
+    },
+    {
+      "text": "What are you passionate about and how can you apply that passion in our organization?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": null,
+      "required": true,
+      "cycle": ["F19", "S20"]
+    },
+    {
+      "text": "What are some personal qualities and/or experiences that make you a valuable candidate for the SEC?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 10,
+      "required": true,
+      "cycle": ["F19", "S20"]
+    },
+    {
+      "text": "Tell me about your proudest accomplishment. What is your favorite failure?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": null,
+      "required": true,
+      "cycle": ["F20", "S21"]
+    },
+    {
+      "text": "Tell me about a peer you look up to and why?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": null,
+      "required": true,
+      "cycle": ["F20", "S21"]
+    },
+    {
+      "text": "Would you consider yourself lucky?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": null,
+      "required": true,
+      "cycle": ["F20", "S21"]
+    },
+    {
+      "text": "How would you define humility?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": null,
+      "required": true,
+      "cycle": ["F20", "S21"]
+    },
+    {
+      "text": "What's your biggest personal goal and what are you doing to reach it?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": null,
+      "required": true,
+      "cycle": ["F20", "S21"]
+    },
+    {
+      "text": "What do you like to do when you're not working?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": null,
+      "required": true,
+      "cycle": ["F20", "S21"]
+    },
+    {
+      "text": "Tell me about at time you failed at something and what did you do?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": null,
+      "required": true,
+      "cycle": ["F20", "S21"]
+    },
+    {
+      "text": "How do you manage your time?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": null,
+      "required": true,
+      "cycle": ["F20", "S21"]
+    },
+    {
+      "text": "What would someone in your personal life say that you need to work on?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": null,
+      "required": true,
+      "cycle": ["F20", "S21"]
+    },
+    {
+      "text": "If you were starting a company, what kinds of people would you hire and why?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": null,
+      "required": true,
+      "cycle": ["F20", "S21"]
+    },
+    {
+      "text": "What kinds of things do you not like to do?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": null,
+      "required": true,
+      "cycle": ["F20", "S21"]
+    },
+    {
+      "text": "What kind of people annoy you the most and how do you deal with them?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": null,
+      "required": true,
+      "cycle": ["F20", "S21"]
+    },
+    {
+      "text": "Which of the three pillars from the SEC Mission Statement means the most to you and why?",
+      "type": "application",
+      "audience": "non_member",
+      "word_limit": 150,
+      "max_score": 3,
+      "required": true,
+      "cycles": ["F20", "S21", "F21", "S22"]
+    },
+    {
+      "text": "Talk about an experience you had with a team. Describe your role and how you made an impact.",
+      "type": "application",
+      "audience": "non_member",
+      "word_limit": 150,
+      "max_score": 3,
+      "required": true,
+      "cycle": ["F20", "S21"]
+    },
+    {
+      "text": "Describe a goal you set for yourself and how you determined your own success in achieving it.",
+      "type": "application",
+      "audience": "non_member",
+      "word_limit": 100,
+      "max_score": 3,
+      "required": true,
+      "cycle": ["F20", "S21"]
+    },
+    {
+      "text": "What is one improvement to the College of Engineering that you believe SEC could contribute to? How would you go about addressing it?",
+      "type": "application",
+      "audience": "non_member",
+      "word_limit": 150,
+      "max_score": 3,
+      "required": true,
+      "cycle": ["F20", "S21"]
+    },
+    {
+      "text": "Upon joining the council, all members are placed in a committee in which they will work with a team towards their committee's mission. How do you uniquely contribute to a team effort?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 4,
+      "required": true,
+      "cycles": ["F21"]
+    },
+    {
+      "text": "How do you see joining SEC as an avenue to work towards your personal growth?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 4,
+      "required": true,
+      "cycle": ["F21"]
+    },
+    {
+      "text": "In your opinion, what is the most important quality of a leader and why do you value that attribute?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 4,
+      "required": true,
+      "cycle": ["F21", "S22", "F22", "S23"]
+    },
+    {
+      "text": "How do you see joining SEC as an avenue to work towards your personal growth?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 4,
+      "required": true,
+      "cycles": ["S22"]
+    },
+    {
+      "text": "What skill sets or personality traits do you have that contribute to a team effort? Can you give a specific example within a team environment?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 4,
+      "required": true,
+      "cycle": ["S22"]
+    },
+    {
+      "text": "What impact do you want to make on the College of Engineering by being a member of the SEC?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 4,
+      "required": true,
+      "cycle": ["S22"]
+    },
+    {
+      "text": "Describe a time that you failed at something. How did you grow from that experience?",
+      "type": "application",
+      "audience": "non_member",
+      "word_limit": 200,
+      "max_score": 4,
+      "required": true,
+      "cycle": ["F22", "S23"]
+    },
+    {
+      "text": "Talk about a time you enjoyed doing work. What did it look like and why did you enjoy it?",
+      "type": "application",
+      "audience": "non_member",
+      "word_limit": 200,
+      "max_score": 4,
+      "required": true,
+      "cycle": ["F22", "S23"]
+    },
+    {
+      "text": "Describe a time when you used a creative/unique solution to solve a problem.",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 4,
+      "required": true,
+      "cycle": ["F22", "S23"]
+    },
+    {
+      "text": "How would a friend describe you?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 4,
+      "required": true,
+      "cycle": ["F22", "S23"]
+    },
+    {
+      "text": "What are you passionate about and how can you apply that passion to SEC?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 4,
+      "required": true,
+      "cycles": ["F22", "S23"]
+    },
+    {
+      "text": "Which of the three pillars from the SEC Mission Statement means the most to you and why?",
+      "type": "application",
+      "audience": "non_member",
+      "word_limit": 150,
+      "max_score": 10,
+      "required": true,
+      "cycles": ["F23", "S24"]
+    },
+    {
+      "text": "Describe a time when you realized you needed additional skills or knowledge to be successful. What was your approach to gaining these skills?",
+      "type": "application",
+      "audience": "non_member",
+      "word_limit": 200,
+      "max_score": 10,
+      "required": true,
+      "cycle": ["F23"]
+    },
+    {
+      "text": "Talk about a time you saw an avenue for improvement and what you did to implement a solution.",
+      "type": "application",
+      "audience": "non_member",
+      "word_limit": 200,
+      "max_score": 10,
+      "required": true,
+      "cycle": ["F23"]
+    },
+    {
+      "text": "What gets you out of the bed in the morning?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 4,
+      "required": true,
+      "cycle": ["F23"]
+    },
+    {
+      "text": "How would you define success for yourself if you were in SEC?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 4,
+      "required": true,
+      "cycle": ["F23"]
+    },
+    {
+      "text": "If you were forming a team, what qualities would you want to see in your team members?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 4,
+      "required": true,
+      "cycle": ["F23"]
+    },
+    {
+      "text": "In one sentence, what do you want to be remembered for?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 4,
+      "required": true,
+      "cycle": ["F23", "S24"]
+    },
+    {
+      "text": "How do you plan to incorporate a passion for helping others into your long-term professional goals, and how can that contribute to the mission of the Student Engineers' Council?",
+      "type": "application",
+      "audience": "non_member",
+      "word_limit": 200,
+      "max_score": 10,
+      "required": true,
+      "cycle": ["S24"]
+    },
+    {
+      "text": "Reflect on a past experience where you demonstrated a strong commitment to achieving a goal outside of the classroom. What roadblocks did you face and what steps did you take to stay focused and dedicated?",
+      "type": "application",
+      "audience": "non_member",
+      "word_limit": 200,
+      "max_score": 10,
+      "required": true,
+      "cycle": ["S24"]
+    },
+    {
+      "text": "List your top core values. Challenge: Describe a time when your core values were challenged. Not challenge: Describe a time when you implemented these core values, outside of the classroom",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 4,
+      "required": true,
+      "cycle": ["S24"]
+    },
+    {
+      "text": "What goals do you have for your time within the Student Engineers' Council? Potential follow up: What steps do you plan on taking to accomplish these goals?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 4,
+      "required": true,
+      "cycle": ["S24"]
+    },
+    {
+        "text": "In three words, how do your friends describe you?",
+        "type": "interview",
+        "audience": "non_member",
+        "word_limit": null,
+        "max_score": 4,
+        "required": true,
+        "cycle": ["S24"]
+      },
+    {
+      "text": "Which of the three pillars from the SEC Mission Statement means the most to you and why?",
+      "type": "application",
+      "audience": "non_member",
+      "word_limit": 150,
+      "max_score": 3,
+      "required": true,
+      "cycles": ["F24"]
+    },
+    {
+      "text": "How did you define success in a goal you have set for yourself in the past?",
+      "type": "application",
+      "audience": "non_member",
+      "word_limit": 250,
+      "max_score": 3,
+      "required": true,
+      "cycle": ["F24"]
+    },
+    {
+      "text": "Describe an experience that shaped your perspective on working with others?",
+      "type": "application",
+      "audience": "non_member",
+      "word_limit": 250,
+      "max_score": 3,
+      "required": true,
+      "cycle": ["F24"]
+    },
+    {
+      "text": "Describe a time you served others.",
+      "type": "application",
+      "audience": "non_member",
+      "word_limit": 200,
+      "max_score": 3,
+      "required": true,
+      "cycle": ["F24"]
+    },
+    {
+      "text": "How do you exemplify your core values?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 3,
+      "required": true,
+      "cycle": ["F24"]
+    },
+    {
+      "text": "Can you describe a time when you overcame a challenge?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 3,
+      "required": true,
+      "cycle": ["F24"]
+    },
+    {
+      "text": "What improvement could be made to the College of Engineering and if you had unlimited resources, how would you go about resolving it?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 3,
+      "required": true,
+      "cycle": ["F24"]
+    },
+    {
+      "text": "Can you share a project or initiative you were passionate about and how you would apply that to SEC?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 3,
+      "required": true,
+      "cycle": ["F24"]
+    },
+    {
+      "text": "What part of our mission resonates most with you, and how have you demonstrated a similar value in your life?",
+      "type": "application",
+      "audience": "non_member",
+      "word_limit": 150,
+      "max_score": 3,
+      "required": true,
+      "cycles": ["S25"]
+    },
+    {
+      "text": "Describe a time when you had to make a difficult decision that not everyone agreed with. How did you handle the situation, and what was the outcome?",
+      "type": "application",
+      "audience": "non_member",
+      "word_limit": 200,
+      "max_score": 3,
+      "required": true,
+      "cycle": ["S25"]
+    },
+    {
+      "text": "If you could create a new initiative or project for SEC, what would it be and why? Outline its objectives and potential impact.",
+      "type": "application",
+      "audience": "non_member",
+      "word_limit": 200,
+      "max_score": 3,
+      "required": true,
+      "cycle": ["S25"]
+    },
+    {
+      "text": "Give me an example of when you demonstrated one of your strengths?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 3,
+      "required": true,
+      "cycle": ["S25"]
+    },
+    {
+      "text": "What is a lesson you learned from a failure or setback in life?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 3,
+      "required": true,
+      "cycle": ["S25"]
+    },
+    {
+      "text": "What does a positive organizational culture look like to you and and what tangible steps would you take to foster that culture?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 3,
+      "required": true,
+      "cycle": ["S25"]
+    },
+    {
+      "text": "What's one big risk you've taken in your academic, personal, or professional life? What did you learn from it?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 3,
+      "required": true,
+      "cycle": ["S25"]
+    },
+    {
+      "text": "What do you want us to remember most about you after this interview?",
+      "type": "interview",
+      "audience": "non_member",
+      "word_limit": null,
+      "max_score": 3,
+      "required": true,
+      "cycle": ["S25"]
+    }
+  ]
