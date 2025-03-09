@@ -124,7 +124,6 @@ class Application(Base):
     __tablename__ = "application"
     
     app_id = Column(Integer, primary_key=True)
-    applicant_id = Column(Integer, ForeignKey("applicant.applicant_id"), nullable=False)
     title = Column(String(255), nullable=False)
     active = Column(Boolean, nullable=False)
     created_time = Column(DateTime, nullable=False)
@@ -133,7 +132,6 @@ class Application(Base):
     cycle_id = Column(Integer, ForeignKey("recruitment_cycle.cycle_id"), nullable=False)
     
     # Relationships
-    applicant = relationship("Applicant", back_populates="applications")
     cycle = relationship("RecruitmentCycle", back_populates="applications")
     reviews = relationship("AppReview", back_populates="application")
     interviews = relationship("Interview", back_populates="application")
