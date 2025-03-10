@@ -51,7 +51,6 @@ class RecruitmentCycle(Base):
     year = Column(Integer, nullable=False)
     
     # Relationships
-    applicants = relationship("Applicant", back_populates="recruitment_cycle")
     applications = relationship("Application", back_populates="cycle")
     interviews = relationship("Interview", back_populates="cycle")
     reviewers = relationship("Reviewer", back_populates="cycle")
@@ -65,11 +64,9 @@ class Applicant(Base):
     major = Column(String(255), nullable=False)
     grad_sem = Column(String(255), nullable=False)
     grad_year = Column(Integer, nullable=False)
-    cycle_id = Column(Integer, ForeignKey("recruitment_cycle.cycle_id"), nullable=False)
     admission = Column(Boolean, nullable=False)
     
     # Relationships
-    recruitment_cycle = relationship("RecruitmentCycle", back_populates="applicants")
     app_responses = relationship("AppResponse", back_populates="applicant")
     review_assignments = relationship("ReviewAssignment", back_populates="applicant")
     interviews = relationship("Interview", back_populates="applicant")
