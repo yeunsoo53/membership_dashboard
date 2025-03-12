@@ -226,11 +226,11 @@ class CommitteeActivity(Base):
 # Handle circular dependency between MentorshipGroup and Member
 # First define both classes with minimal attributes
 
-class MentorshipGroup(Base):
-    __tablename__ = "mentorship_group"
+# class MentorshipGroup(Base):
+#     __tablename__ = "mentorship_group"
     
-    mentorship_id = Column(Integer, primary_key=True)
-    lead_mentor_id = Column(Integer, ForeignKey("member.member_id"), nullable=False)
+#     mentorship_id = Column(Integer, primary_key=True)
+#     lead_mentor_id = Column(Integer, ForeignKey("member.member_id"), nullable=False)
 
 class Member(Base):
     __tablename__ = "member"
@@ -239,21 +239,30 @@ class Member(Base):
     applicant_id = Column(Integer, ForeignKey("applicant.applicant_id"), nullable=False)
     first_name = Column(String(255), nullable=False)
     last_name = Column(String(255), nullable=False)
+    uin = Column(String(255), nullable=False)
+    tamu_email = Column(String(255), nullable=False)
     phone = Column(String(255), nullable=False)
     cohort_sem = Column(String(255), nullable=False)
     cohort_year = Column(Integer, nullable=False)
+    grad_sem = Column(String(255), nullable=False)
+    grad_year = Column(Integer, nullable=False)
     is_active = Column(Boolean, nullable=False)
-    standing = Column(String(255), nullable=False)
-    mentorship_id = Column(Integer, ForeignKey("mentorship_group.mentorship_id"), nullable=False)
+    probation = Column(Boolean, nullable=False)
+    # mentorship_id = Column(Integer, ForeignKey("mentorship_group.mentorship_id"), nullable=False)
+    linkedin = Column(String(255), nullable=False)
+    insta = Column(String(255), nullable=False)
+    birthday_month = Column(Integer, nullable=False)
+    birthday_day = Column(Integer, nullable=False)
+    birthday_year = Column(Integer, nullable=False)
 
 # Now add relationships
-MentorshipGroup.lead_mentor = relationship("Member", foreign_keys=[MentorshipGroup.lead_mentor_id], back_populates="led_mentorship")
-MentorshipGroup.members = relationship("Member", foreign_keys="Member.mentorship_id", back_populates="mentorship_group")
-MentorshipGroup.activities = relationship("MentorshipActivity", back_populates="mentorship")
+# MentorshipGroup.lead_mentor = relationship("Member", foreign_keys=[MentorshipGroup.lead_mentor_id], back_populates="led_mentorship")
+# MentorshipGroup.members = relationship("Member", foreign_keys="Member.mentorship_id", back_populates="mentorship_group")
+# MentorshipGroup.activities = relationship("MentorshipActivity", back_populates="mentorship")
 
 Member.applicant = relationship("Applicant", back_populates="member")
-Member.mentorship_group = relationship("MentorshipGroup", foreign_keys=[Member.mentorship_id], back_populates="members")
-Member.led_mentorship = relationship("MentorshipGroup", foreign_keys="MentorshipGroup.lead_mentor_id", back_populates="lead_mentor", uselist=False)
+# Member.mentorship_group = relationship("MentorshipGroup", foreign_keys=[Member.mentorship_id], back_populates="members")
+# Member.led_mentorship = relationship("MentorshipGroup", foreign_keys="MentorshipGroup.lead_mentor_id", back_populates="lead_mentor", uselist=False)
 Member.history = relationship("MemberHistory", back_populates="member")
 Member.reviewer = relationship("Reviewer", back_populates="member")
 Member.activity_attendance = relationship("ActivityAttendance", back_populates="member")
@@ -278,17 +287,17 @@ class MemberHistory(Base):
     position = relationship("Position", back_populates="member_history")
     committee = relationship("Committee", back_populates="member_history")
 
-class MentorshipActivity(Base):
-    __tablename__ = "mentorship_activity"
+# class MentorshipActivity(Base):
+#     __tablename__ = "mentorship_activity"
     
-    activity_id = Column(Integer, primary_key=True)
-    mentorship_id = Column(Integer, ForeignKey("mentorship_group.mentorship_id"), nullable=False)
-    date = Column(Date, nullable=False)
-    type = Column(String(255), nullable=False)
-    description = Column(Text, nullable=False)
+#     activity_id = Column(Integer, primary_key=True)
+#     mentorship_id = Column(Integer, ForeignKey("mentorship_group.mentorship_id"), nullable=False)
+#     date = Column(Date, nullable=False)
+#     type = Column(String(255), nullable=False)
+#     description = Column(Text, nullable=False)
     
-    # Relationships
-    mentorship = relationship("MentorshipGroup", back_populates="activities")
+#     # Relationships
+#     mentorship = relationship("MentorshipGroup", back_populates="activities")
 
 class ActivityAttendance(Base):
     __tablename__ = "activity_attendance"
