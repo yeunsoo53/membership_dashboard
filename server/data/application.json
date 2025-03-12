@@ -70,5 +70,41 @@
     "review_completion_time": "2021-09-21 17:00:00",
     "semester": "Fall",
     "year": 2021
-   }
+   },
+   {
+      "title": "Spring 2021 New Member Application",
+      "active": false,
+      "published_time": "2021-01-18 08:00:00",
+      "closed_time": "2021-02-01 23:59:00",
+      "review_completion_time": "2021-02-05 17:00:00",
+      "semester": "Spring",
+      "year": 2021
+     },
+     {
+      "title": "Fall 2020 New Member Application",
+      "active": false,
+      "published_time": "2020-08-24 08:00:00",
+      "closed_time": "2020-09-14 23:59:00",
+      "review_completion_time": "2020-09-17 17:00:00",
+      "semester": "Fall",
+      "year": 2020
+     },
+     {
+      "title": "Spring 2020 New Member Application",
+      "active": false,
+      "published_time": "2020-01-18 08:00:00",
+      "closed_time": "2020-02-03 23:59:00",
+      "review_completion_time": "2020-02-05 17:00:00",
+      "semester": "Spring",
+      "year": 2020
+     },
+     {
+      "title": "Fall 2019 New Member Application",
+      "active": false,
+      "published_time": "2019-08-28 08:00:00",
+      "closed_time": "2019-09-16 23:59:00",
+      "review_completion_time": "2019-09-20 17:00:00",
+      "semester": "Fall",
+      "year": 2019
+     }
 ]

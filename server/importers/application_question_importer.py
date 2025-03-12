@@ -1,7 +1,7 @@
 from importers.base_importer import BaseImporter
-from models import Question, RecruitmentCycle, Application, ApplicationQuestion
+from models import Question, RecruitmentCycle, Application, ApplicationQuestion, QuestionType
 
-class ApplicationQuestionImporter(BaseImporter):
+class AppQuestionImporter(BaseImporter):
 
     def import_data(self, question_file):
         #load data
@@ -17,29 +17,51 @@ class ApplicationQuestionImporter(BaseImporter):
         }
 
         try:
+            #process each question in question file
             for question_data in data:
-                stats["processed"] += 1
+                stats["processed"] += 1 
 
+                # question_type_str = question_data.get("type")
+                question_type = QuestionType.APPLICATION
+                # try:
+                #     # Convert string to enum value
+                #     question_type = QuestionType(question_type_str)
+                # except ValueError:
+                #     self.logger.error(f"Invalid question type: {question_type_str}")
+                #     stats["errors"] += 1
+                #     continue
+
+                #get question text
                 question = self._get_existing_record (
                     Question,
-                    text=question_data.get("text")
+                    text=question_data.get("text"),
+                    type=question_type
                 )
                 if not question:
-                    self.logger.error(f"Question not found: {question}")
-                    stats["errors"] += 1
+                    self.logger.info(f"Question not found: {question}")
                     continue
+                
+                self.logger.info(f"question text: {question.text} question type: {question.type}")
+                #get question id
+                question_id = question.question_id
 
-                question_id = question.id
+                #get cycles for the question
+                cycles = question_data.get("cycle", [])
+                self.logger.info(f"cycles: {cycles}")
 
-                for cycle_code in question_data.get("cycles", []):
+                #get cycle data for each question
+                for cycle_code in cycles:
                     semester = "Fall" if cycle_code[0].upper() == "F" else "Spring"
                     year = "20" + cycle_code[1:]
 
+                    #get the matching cycle record
                     cycle = self._get_existing_record(
                         RecruitmentCycle,
                         semester=semester,
                         year=year
                     )
+
+                    self.logger.info(f"Found cycle id for {cycle_code} : {cycle.cycle_id}")
 
                     if not cycle:
                         self.logger.error(f"Cycle not found: {semester} {year}")
@@ -49,7 +71,7 @@ class ApplicationQuestionImporter(BaseImporter):
                     #find application with matching cycle id
                     application = self._get_existing_record(
                         Application,
-                        cycle_id=cycle.id
+                        cycle_id=cycle.cycle_id
                     )
 
                     if not application:
@@ -57,21 +79,22 @@ class ApplicationQuestionImporter(BaseImporter):
                         stats["errors"] += 1
                         continue
 
+                    #check if record exists
                     existing = self._get_existing_record(
                         ApplicationQuestion,
-                        app_id=application.id,
+                        app_id=application.app_id,
                         question_id=question_id
                     )
 
                     if existing:
-                        self.logger.info("ApplicationQuestion already exists for application {application.id} and question {quesiton_id}")
+                        self.logger.info(f"ApplicationQuestion already exists for application {application.app_id} and question {question_id}")
                         stats["skipped"] += 1
                         continue
 
                     #create new entry
                     try:
                         app_question = ApplicationQuestion (
-                            app_id=application.id,
+                            app_id=application.app_id,
                             question_id=question_id
                         )
 
@@ -85,8 +108,13 @@ class ApplicationQuestionImporter(BaseImporter):
                         self.session.rollback()
                         self.logger.error(f"Error creating ApplicationQuestion: {e}")
                         stats["errors"] += 1
+                        return False
         except Exception as e:
             self.logger.error(f"Error processing questions from json: {e}")
             stats["errors"] += 1
 
-        return stats
+        self.logger.info(f"Processed {stats['processed']}; created {stats['created']}; skipped {stats['skipped']}; errors in {stats['errors']}")
+        
+        if stats["errors"] > 0:
+            return False
+        return True

@@ -11,7 +11,7 @@ def setup_logging(log_dir="logs"):
 
     log_file = os.path.join(
         log_dir,
-        f"db_populaton_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
+        f"db_population_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
     )
 
     logging.basicConfig(
@@ -68,17 +68,20 @@ def main():
     
     #map of importer classes to datafiles
     data_files = {
-        'CommitteeImporter': os.path.join(args.data_dir, "committee.json"),
-        'PositionImporter': os.path.join(args.data_dir, "position.json"),
-        'MeetingImporter': os.path.join(args.data_dir, "meeting.csv"),
-        'RecruitmentCycleImporter': os.path.join(args.data_dir, "recruitment_cycle.json"),
-        'QuestionImporter': os.path.join(args.data_dir, "question.json"),
-        'ApplicationImporter': os.path.join(args.data_dir, "application.json"),
-        'ApplicantImporter': os.path.join(args.data_dir, "Spring_2025_New_Member_Application.json"),
-        'ApplicantImporter': os.path.join(args.data_dir, "Fall_2024_New_Member_Application.json"),
-        'ApplicantImporter': os.path.join(args.data_dir, "Spring_2024_New_Member_Application.json"),
-        'ApplicantImporter': os.path.join(args.data_dir, "Fall_2023_New_Member_Application.json"),
-        'ApplicantImporter': os.path.join(args.data_dir, "Spring_2023_New_Member_Application.json")
+        'CommitteeImporter': [os.path.join(args.data_dir, "committee.json")],
+        'PositionImporter': [os.path.join(args.data_dir, "position.json")],
+        'MeetingImporter': [os.path.join(args.data_dir, "meeting.csv")],
+        'RecruitmentCycleImporter': [os.path.join(args.data_dir, "recruitment_cycle.json")],
+        'QuestionImporter': [os.path.join(args.data_dir, "question.json")],
+        'ApplicationImporter': [os.path.join(args.data_dir, "application.json")],
+        'ApplicantImporter': [
+            os.path.join(args.data_dir, "Spring_2025_NM_App.json"),
+            os.path.join(args.data_dir, "Fall_2024_NM_App.json"),
+            os.path.join(args.data_dir, "Spring_2024_NM_App.json"),
+            # os.path.join(args.data_dir, "Fall_2023_NM_App.json"),
+            # os.path.join(args.data_dir, "Spring_2023_NM_App.json")
+        ],
+        'AppQuestionImporter': [os.path.join(args.data_dir, "question.json")]
     }
 
     #track success
@@ -102,30 +105,39 @@ def main():
     #run each importer
     for importer_class in importers_to_run:
         importer_name = importer_class.__name__
-        data_file = data_files.get(importer_name)
+        file_list = data_files.get(importer_name, [])
 
-        if not data_file:
+        if not file_list:
             logger.warning(f"No data file specified for {importer_name}, skipping")
             continue
-
-        logger.info(f"Starting import for {importer_name} from {data_file}")
-
-        if not os.path.exists(data_file):
-            logger.error(f"Data file not found: {data_file}")
-            failure_count += 1
-            return 1
         
         #create importer instance and run import
         importer = importer_class(db)
-        success = importer.import_data(data_file)
+        importer_success = True
 
-        if success:
-            logger.info(f"Successfully completed import for {importer_name}")
+        for data_file in file_list:
+
+            logger.info(f"Starting import for {importer_name} from {data_file}")
+
+
+            if not os.path.exists(data_file):
+                logger.error(f"Data file not found: {data_file}")
+                importer_success = False
+                continue
+        
+            file_success = importer.import_data(data_file)
+
+            if file_success:
+                logger.info(f"Successfully completed import for {importer_name}")
+            else:
+                logger.error(f"Failed to import data for {importer_name}")
+                importer_success = False
+
+        if importer_success:
             success_count += 1
         else:
-            logger.error(f"Failed to import data for {importer_name}")
             failure_count += 1
-
+        
     logger.info(f"Import process completed: {success_count} successful, {failure_count} failed")
 
     db.close()

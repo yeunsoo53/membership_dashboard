@@ -59,27 +59,33 @@ class ApplicantImporter(BaseImporter):
             bool: True if data is valid, False otherwise
         """
 
-        if not item.get('UIN'):
+        # Check if UIN exists and has a value
+        if 'UIN' not in item or item['UIN'] is None or item['UIN'] == '':
             self.logger.warning("Skipping applicant with missing UIN")
             return False
         
-        if not item.get('Email'):
+        # Check if Email exists and has a value
+        if 'Email' not in item or item['Email'] is None or item['Email'] == '':
             self.logger.warning(f"Skipping applicant '{item.get('UIN')}' with missing email")
             return False
         
-        if not item.get('Major'):
+        # Check if Major exists and has a value
+        if 'Major' not in item or item['Major'] is None or item['Major'] == '':
             self.logger.warning(f"Skipping applicant '{item.get('UIN')}' with missing major")
             return False
         
-        if not item.get('Grad Semester'):
+        # Check if Grad Semester exists and has a value
+        if 'Grad Semester' not in item or item['Grad Semester'] is None or item['Grad Semester'] == '':
             self.logger.warning(f"Skipping applicant '{item.get('UIN')}' with missing grad semester")
             return False
         
-        if not item.get('Grad Year'):
+        # Check if Grad Year exists and has a value
+        if 'Grad Year' not in item or item['Grad Year'] is None or item['Grad Year'] == '':
             self.logger.warning(f"Skipping applicant '{item.get('UIN')}' with missing grad year")
             return False
         
-        if not item.get('Admission'):
+        # Check if Admission exists (can be True or False)
+        if 'Admission' not in item:
             self.logger.warning(f"Skipping applicant '{item.get('UIN')}' with missing admission status")
             return False
 

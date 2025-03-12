@@ -6,7 +6,7 @@
       "word_limit": 200,
       "max_score": null,
       "required": true,
-      "cycles": ["F19", "S20", "F20", "S21"]
+      "cycle": ["F19", "S20", "F20", "S21"]
     },
     {
       "text": "In what ways do you believe you embody the SEC mission statement (please use specific examples)?",
@@ -177,7 +177,7 @@
       "word_limit": 150,
       "max_score": 3,
       "required": true,
-      "cycles": ["F20", "S21", "F21", "S22"]
+      "cycle": ["F20", "S21", "F21", "S22"]
     },
     {
       "text": "Talk about an experience you had with a team. Describe your role and how you made an impact.",
@@ -213,7 +213,7 @@
       "word_limit": null,
       "max_score": 4,
       "required": true,
-      "cycles": ["F21"]
+      "cycle": ["F21"]
     },
     {
       "text": "How do you see joining SEC as an avenue to work towards your personal growth?",
@@ -240,7 +240,7 @@
       "word_limit": null,
       "max_score": 4,
       "required": true,
-      "cycles": ["S22"]
+      "cycle": ["S22"]
     },
     {
       "text": "What skill sets or personality traits do you have that contribute to a team effort? Can you give a specific example within a team environment?",
@@ -303,7 +303,7 @@
       "word_limit": null,
       "max_score": 4,
       "required": true,
-      "cycles": ["F22", "S23"]
+      "cycle": ["F22", "S23"]
     },
     {
       "text": "Which of the three pillars from the SEC Mission Statement means the most to you and why?",
@@ -312,7 +312,7 @@
       "word_limit": 150,
       "max_score": 10,
       "required": true,
-      "cycles": ["F23", "S24"]
+      "cycle": ["F23", "S24"]
     },
     {
       "text": "Describe a time when you realized you needed additional skills or knowledge to be successful. What was your approach to gaining these skills?",
@@ -420,7 +420,7 @@
       "word_limit": 150,
       "max_score": 3,
       "required": true,
-      "cycles": ["F24"]
+      "cycle": ["F24"]
     },
     {
       "text": "How did you define success in a goal you have set for yourself in the past?",
@@ -492,7 +492,7 @@
       "word_limit": 150,
       "max_score": 3,
       "required": true,
-      "cycles": ["S25"]
+      "cycle": ["S25"]
     },
     {
       "text": "Describe a time when you had to make a difficult decision that not everyone agreed with. How did you handle the situation, and what was the outcome?",
