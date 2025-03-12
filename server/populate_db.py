@@ -73,7 +73,12 @@ def main():
         'MeetingImporter': os.path.join(args.data_dir, "meeting.csv"),
         'RecruitmentCycleImporter': os.path.join(args.data_dir, "recruitment_cycle.json"),
         'QuestionImporter': os.path.join(args.data_dir, "question.json"),
-        'ApplicationImporter': os.path.join(args.data_dir, "application.json")
+        'ApplicationImporter': os.path.join(args.data_dir, "application.json"),
+        'ApplicantImporter': os.path.join(args.data_dir, "Spring_2025_New_Member_Application.json"),
+        'ApplicantImporter': os.path.join(args.data_dir, "Fall_2024_New_Member_Application.json"),
+        'ApplicantImporter': os.path.join(args.data_dir, "Spring_2024_New_Member_Application.json"),
+        'ApplicantImporter': os.path.join(args.data_dir, "Fall_2023_New_Member_Application.json"),
+        'ApplicantImporter': os.path.join(args.data_dir, "Spring_2023_New_Member_Application.json")
     }
 
     #track success

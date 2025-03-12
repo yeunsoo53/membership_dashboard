@@ -138,8 +138,7 @@ class ApplicationQuestion(Base):
     application_question_id = Column(Integer, primary_key=True)
     app_id = Column(Integer, ForeignKey("application.app_id"), nullable=False)
     question_id = Column(Integer, ForeignKey("question.question_id"), nullable=False)
-    display_order = Column(Integer, nullable=False, default=0)
-    
+
     # Relationships
     application = relationship("Application", back_populates="questions")
     question = relationship("Question", back_populates="application_questions")

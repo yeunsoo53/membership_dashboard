@@ -6,7 +6,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
-import os, time, traceback, json, datetime
+import os, time, traceback, json, re
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, 
@@ -271,8 +271,8 @@ def extract_applicant_data(driver, start_question, end_question):
                 "Major": "",
                 "Grad Semester": "",
                 "Grad Year": "",
+                "Admission": False,
                 "Questions": {}
-
             }
 
             driver.execute_script("arguments[0].scrollIntoView({block: 'center', inline: 'center'});", app_button)
@@ -316,20 +316,22 @@ def extract_applicant_data(driver, start_question, end_question):
                     grad_text = grad_element.text.strip()
                     
                     # Parse the graduation text to extract semester and year
-                    semester_keywords = ["Spring", "Fall"]
+                    semester_keywords = ["spring", "fall", "may", "december", "winter"]
                     grad_sem = "Unknown"
-                    grad_year = "Unknown"
+                    grad_year = 0
                     
                     # Check for semester keywords and numbers
                     words = grad_text.split()
-                    for i, word in enumerate(words):
-                        if word in semester_keywords and i+1 < len(words):
+                    for word in words:
+                        word = re.sub(r'[^\w\s]', '', word)
+                        if word.lower() in semester_keywords:
                             # Found a semester keyword, check if the next word is a year
-                            grad_sem = word
-                            # Check if the next word is a 4-digit number (year)
-                            if words[i+1].isdigit() and len(words[i+1]) == 4:
-                                grad_year = words[i+1]
-                                break
+                            if word.lower() == "spring" or "may":
+                                grad_sem = "Spring"
+                            else:
+                                grad_sem = "Fall"
+                        elif "202" in word:
+                            grad_year = int(word[:4])
                     
                     applicant_data["Grad Semester"] = grad_sem
                     applicant_data["Grad Year"] = grad_year

@@ -1,6 +1,6 @@
+
 from importers.base_importer import BaseImporter
 from models import Committee, CommitteeDivision
-
 class CommitteeImporter(BaseImporter):
     
     def import_data(self, data_file):

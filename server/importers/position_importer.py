@@ -1,8 +1,7 @@
 from importers.base_importer import BaseImporter
 from models import Position, PositionLevel
 
-class PositionImporter(BaseImporter):
-    
+class PositionImporter(BaseImporter): 
     def import_data(self, data_file):
         #load data
         data = self._load_json(data_file)
