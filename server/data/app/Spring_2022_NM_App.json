@@ -1,0 +1,502 @@
+[
+    {
+        "UIN": "431005196",
+        "Name": "Megha Subhash",
+        "Score": "10.83333333",
+        "Email": "meghasubhash@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": true
+    },
+    {
+        "UIN": "731001648",
+        "Name": "Isabella Mondelli",
+        "Score": "9.5",
+        "Email": "k1211503@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": false
+    },
+    {
+        "UIN": "931005660",
+        "Name": "Ellie Boll",
+        "Score": "9.333333333",
+        "Email": "eboll5@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": true
+    },
+    {
+        "UIN": "530008302",
+        "Name": "Emily Wussow",
+        "Score": "8.833333333",
+        "Email": "Egwussow@gmail.com",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": true
+    },
+    {
+        "UIN": "132001696",
+        "Name": "Likhitha Veerapalli",
+        "Score": "8.833333333",
+        "Email": "likhithav@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": true
+    },
+    {
+        "UIN": "523001993",
+        "Name": "Tasya Nasoetion",
+        "Score": "8.833333333",
+        "Email": "tsn292@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2023,
+        "Major": "Materials Science & Engineering",
+        "Admission": true
+    },
+    {
+        "UIN": "631003709",
+        "Name": "Keeley Mahoney",
+        "Score": "8.833333333",
+        "Email": "keeley2403@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": true
+    },
+    {
+        "UIN": "131002092",
+        "Name": "Apsara Mitra",
+        "Score": "8.666666667",
+        "Email": "apsara@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2023,
+        "Major": "Computer Science",
+        "Admission": true
+    },
+    {
+        "UIN": "128006878",
+        "Name": "Arhum Khan",
+        "Score": "8.5",
+        "Email": "arhumk@tamu.edu",
+        "Grad Semester": "Fall",
+        "Grad Year": 2023,
+        "Major": "Chemical Engineering",
+        "Admission": false
+    },
+    {
+        "UIN": "331000342",
+        "Name": "Samantha Lo",
+        "Score": "8.5",
+        "Email": "sam.juliet273@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": true
+    },
+    {
+        "UIN": "331000350",
+        "Name": "Sudiksha Pradhan",
+        "Score": "8.5",
+        "Email": "sudikshapradhan@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": true
+    },
+    {
+        "UIN": "928006628",
+        "Name": "Ozioma Mgbahurike",
+        "Score": "8.5",
+        "Email": "oxm0911@tamu.edu",
+        "Grad Semester": "Fall",
+        "Grad Year": 2023,
+        "Major": "Electrical Engineering",
+        "Admission": true
+    },
+    {
+        "UIN": "931005598",
+        "Name": "Jacob Isakson",
+        "Score": "8.5",
+        "Email": "jakeisakson@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": true
+    },
+    {
+        "UIN": "630000555",
+        "Name": "Reagan Wall",
+        "Score": "8.166666667",
+        "Email": "reagwall@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "Industrial and Systems Engineering",
+        "Admission": false
+    },
+    {
+        "UIN": "830004069",
+        "Name": "Shaham Noorani",
+        "Score": "8.166666667",
+        "Email": "shahamnoorani@gmail.com",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "Computer Science",
+        "Admission": true
+    },
+    {
+        "UIN": "831006112",
+        "Name": "Grace Aasletten",
+        "Score": "8.166666667",
+        "Email": "grace.aasletten@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": false
+    },
+    {
+        "UIN": "228007288",
+        "Name": "Haley Hanson",
+        "Score": "8.166666667",
+        "Email": "haleyhanson@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2023,
+        "Major": "Environmental Engineering",
+        "Admission": true
+    },
+    {
+        "UIN": "513002104",
+        "Name": "Zach Holcomb",
+        "Score": "8",
+        "Email": "zholcomb@tamu.edu",
+        "Grad Semester": "Fall",
+        "Grad Year": 2023,
+        "Major": "Industrial and Systems Engineering",
+        "Admission": false
+    },
+    {
+        "UIN": "103002607",
+        "Name": "Eren Akleman",
+        "Score": "8",
+        "Email": "eren.akleman@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "Mechanical Engineering",
+        "Admission": true
+    },
+    {
+        "UIN": "131007760",
+        "Name": "Emma Moser",
+        "Score": "8",
+        "Email": "mosere18@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": false
+    },
+    {
+        "UIN": "531000088",
+        "Name": "Isabelle Baumler",
+        "Score": "8",
+        "Email": "Izzybaumler@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": true
+    },
+    {
+        "UIN": "531001656",
+        "Name": "Annalaine Whitson",
+        "Score": "8",
+        "Email": "luluwhitson@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": true
+    },
+    {
+        "UIN": "231007053",
+        "Name": "Sean Bolger",
+        "Score": "7.833333333",
+        "Email": "seanabolger@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": true
+    },
+    {
+        "UIN": "128009085",
+        "Name": "Aaron Aranda",
+        "Score": "7.833333333",
+        "Email": "aaron1107@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2023,
+        "Major": "Computer Science",
+        "Admission": false
+    },
+    {
+        "UIN": "130008449",
+        "Name": "Mary Catherine Daniels",
+        "Score": "7.833333333",
+        "Email": "mcdaniels027@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "Industrial & Systems Engineering",
+        "Admission": true
+    },
+    {
+        "UIN": "130009131",
+        "Name": "Trevor Gard",
+        "Score": "7.833333333",
+        "Email": "trevorray2@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "Mechanical Engineering",
+        "Admission": true
+    },
+    {
+        "UIN": "131009522",
+        "Name": "John Lehan",
+        "Score": "7.833333333",
+        "Email": "jrlehan@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": true
+    },
+    {
+        "UIN": "231007055",
+        "Name": "Deeptha Karur",
+        "Score": "7.833333333",
+        "Email": "deeptha_karur@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": false
+    },
+    {
+        "UIN": "431006775",
+        "Name": "Matthew Cupich",
+        "Score": "7.833333333",
+        "Email": "matthew.cupich@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": true
+    },
+    {
+        "UIN": "728006263",
+        "Name": "Adam Hedman",
+        "Score": "7.833333333",
+        "Email": "ahedman2000@tamu.edu",
+        "Grad Semester": "Fall",
+        "Grad Year": 2023,
+        "Major": "Industrial & Systems Engineering",
+        "Admission": true
+    },
+    {
+        "UIN": "931006516",
+        "Name": "Giselle Martinez",
+        "Score": "7.833333333",
+        "Email": "gmartinez2@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": false
+    },
+    {
+        "UIN": "131009765",
+        "Name": "Julia Hoke",
+        "Score": "7.666666667",
+        "Email": "juliahoke@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": false
+    },
+    {
+        "UIN": "331001780",
+        "Name": "Yazan Numan",
+        "Score": "7.666666667",
+        "Email": "ynuman2@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": false
+    },
+    {
+        "UIN": "831004925",
+        "Name": "Sophie Wills",
+        "Score": "7.666666667",
+        "Email": "swills831004925@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": false
+    },
+    {
+        "UIN": "930005079",
+        "Name": "Stefano Micci-Barreca",
+        "Score": "7.666666667",
+        "Email": "stefano.micci@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "Chemical Engineering",
+        "Admission": true
+    },
+    {
+        "UIN": "931006323",
+        "Name": "Hugo Trueba",
+        "Score": "7.666666667",
+        "Email": "h.e.trueba@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": false
+    },
+    {
+        "UIN": "628001687",
+        "Name": "Houston Bailey",
+        "Score": "7.5",
+        "Email": "houstonjbailey@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2023,
+        "Major": "Mechanical Engineering",
+        "Admission": false
+    },
+    {
+        "UIN": "230007162",
+        "Name": "Isabela Ibarra",
+        "Score": "7.5",
+        "Email": "isabela_ibarra@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "Computer Science",
+        "Admission": false
+    },
+    {
+        "UIN": "331000636",
+        "Name": "Matthew Stevens",
+        "Score": "7.5",
+        "Email": "matthewstevens@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": false
+    },
+    {
+        "UIN": "331002814",
+        "Name": "Clint Hart",
+        "Score": "7.5",
+        "Email": "clinthart21@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": false
+    },
+    {
+        "UIN": "630002558",
+        "Name": "Ella Edwards",
+        "Score": "7.5",
+        "Email": "ellaedwards@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "Interdisciplinary Engineering",
+        "Admission": true
+    },
+    {
+        "UIN": "831003428",
+        "Name": "Sarika Venkat",
+        "Score": "7.5",
+        "Email": "sarikav@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": true
+    },
+    {
+        "UIN": "831008925",
+        "Name": "Emily Huebel",
+        "Score": "7.5",
+        "Email": "emilyhuebel@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": false
+    },
+    {
+        "UIN": "131009135",
+        "Name": "Emmanuel Mendoza",
+        "Score": "7.333333333",
+        "Email": "emmanuelmendoza2020@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "Aerospace Engineering",
+        "Admission": true
+    },
+    {
+        "UIN": "529008096",
+        "Name": "Kiran Singal",
+        "Score": "7.333333333",
+        "Email": "kiransingal@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "Mechanical Engineering",
+        "Admission": false
+    },
+    {
+        "UIN": "331002779",
+        "Name": "Rishi Chakrapani",
+        "Score": "7.333333333",
+        "Email": "rishikhesh@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": false
+    },
+    {
+        "UIN": "428002625",
+        "Name": "Renate Olson",
+        "Score": "7.333333333",
+        "Email": "renateolson@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2023,
+        "Major": "Architectural Engineering",
+        "Admission": true
+    },
+    {
+        "UIN": "430005679",
+        "Name": "Richa Shah",
+        "Score": "7.333333333",
+        "Email": "richabshah@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": false
+    },
+    {
+        "UIN": "831004901",
+        "Name": "Sarisha Malla",
+        "Score": "7.333333333",
+        "Email": "sarisha.malla@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering (Pre-ETAM)",
+        "Admission": false
+    },
+    {
+        "UIN": "930003177",
+        "Name": "Nicholas Huynh",
+        "Score": "7.333333333",
+        "Email": "nthuynh20@tamu.edu",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "Industrial & Systems Engineering",
+        "Admission": false
+    }
+]

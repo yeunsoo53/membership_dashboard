@@ -242,6 +242,7 @@ class Member(Base):
     uin = Column(String(255), nullable=False)
     tamu_email = Column(String(255), nullable=False)
     phone = Column(String(255), nullable=False)
+    major = Column(String(255), nullable=False)
     cohort_sem = Column(String(255), nullable=False)
     cohort_year = Column(Integer, nullable=False)
     grad_sem = Column(String(255), nullable=False)

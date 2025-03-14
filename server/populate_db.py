@@ -75,11 +75,13 @@ def main():
         'QuestionImporter': [os.path.join(args.data_dir, "question.json")],
         'ApplicationImporter': [os.path.join(args.data_dir, "application.json")],
         'ApplicantImporter': [
-            os.path.join(args.data_dir, "Spring_2025_NM_App.json"),
-            os.path.join(args.data_dir, "Fall_2024_NM_App.json"),
-            os.path.join(args.data_dir, "Spring_2024_NM_App.json"),
+            # os.path.join(args.data_dir, "Spring_2025_NM_App.json"),
+            # os.path.join(args.data_dir, "Fall_2024_NM_App.json"),
+            # os.path.join(args.data_dir, "Spring_2024_NM_App.json"),
             # os.path.join(args.data_dir, "Fall_2023_NM_App.json"),
-            # os.path.join(args.data_dir, "Spring_2023_NM_App.json")
+            # os.path.join(args.data_dir, "Spring_2023_NM_App.json"),
+            os.path.join(args.data_dir, "Fall_2022_NM_App.json"),
+            os.path.join(args.data_dir, "Spring_2022_NM_App.json")
         ],
         'AppQuestionImporter': [os.path.join(args.data_dir, "question.json")]
     }

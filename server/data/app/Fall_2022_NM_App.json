@@ -1,0 +1,200 @@
+[
+    {
+        "Name": "Adam Sulemanji",
+        "UIN": "830007169",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "Computer Science",
+        "Email": "adamsulemanji@tamu.edu",
+        "Admission": true
+    },
+    {
+        "Name": "Adelaide Danna",
+        "UIN": "231004778",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "Industrial Systems Engineering ",
+        "Email": "adelaid3danna@tamu.edu",
+        "Admission": true
+    },
+    {
+        "Name": "Aidan Atkins",
+        "UIN": "530009875",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "Biomedical Engineering",
+        "Email": "adatkins@tamu.edu",
+        "Admission": true
+    },
+    {
+        "Name": "Alexander Pantazopol",
+        "UIN": "930009024",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "Computer Science",
+        "Email": "apantazopol@tamu.edu",
+        "Admission": true
+    },
+    {
+        "Name": "Alexandra Morton",
+        "UIN": "731003731",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "Biomedical Engineering",
+        "Email": "allie.morton@me.com",
+        "Admission": true
+    },
+    {
+        "Name": "Bailey Faulk",
+        "UIN": "831004349",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "Electrical Engineering",
+        "Email": "baileyfaulk2003@tamu.edu",
+        "Admission": true
+    },
+    {
+        "Name": "Cole Cieslewicz",
+        "UIN": "731001102",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "Electrical Engineering",
+        "Email": "colem40@tamu.edu",
+        "Admission": true
+    },
+    {
+        "Name": "Daniel Fitzgerald",
+        "UIN": "630005580",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "Chemical Engineering",
+        "Email": "daniel.fitzgerald@tamu.edu",
+        "Admission": true
+    },
+    {
+        "Name": "Haris Sattar",
+        "UIN": "231009998",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "Computer Science",
+        "Email": "harissattar@tamu.edu",
+        "Admission": true
+    },
+    {
+        "Name": "Heidi Ruf",
+        "UIN": "830001383",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "Chemical Engineering ",
+        "Email": "heidinguyenruf@tamu.edu",
+        "Admission": true
+    },
+    {
+        "Name": "Jakob Jones",
+        "UIN": "331001741",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "Mechanical Engineering",
+        "Email": "jakobjones@tamu.edu",
+        "Admission": true
+    },
+    {
+        "Name": "Joshua McCall",
+        "UIN": "130007635",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "Mechanical Engineering",
+        "Email": "joshuamccall@tamu.edu",
+        "Admission": true
+    },
+    {
+        "Name": "Kara Lawdermilk",
+        "UIN": "330001482",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "Biological and Agricultural Engineering ",
+        "Email": "karab23@tamu.edu",
+        "Admission": true
+    },
+    {
+        "Name": "Kethan Reddy",
+        "UIN": "130006563",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "Computer Science",
+        "Email": "kethanreddy@tamu.edu",
+        "Admission": true
+    },
+    {
+        "Name": "Maddy Simpson",
+        "UIN": "631001158",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "Chemical Engineering",
+        "Email": "maddy.simpson@tamu.edu",
+        "Admission": true
+    },
+    {
+        "Name": "Manveer Singh",
+        "UIN": "931008529",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "Mechanical Engineering",
+        "Email": "manveer488@tamu.edu",
+        "Admission": true
+    },
+    {
+        "Name": "Maximillian Chung",
+        "UIN": "831001971",
+        "Grad Semester": "Spring",
+        "Grad Year": 2025,
+        "Major": "General Engineering",
+        "Email": "mrc@tamu.edu",
+        "Admission": true
+    },
+    {
+        "Name": "Mihir Cherukupalli",
+        "UIN": "731001216",
+        "Grad Semester": "Fall",
+        "Grad Year": 2024,
+        "Major": "Computer Engineering",
+        "Email": "mihir.cherukupalli@tamu.edu",
+        "Admission": true
+    },
+    {
+        "Name": "Reagan Wall",
+        "UIN": "630000555",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "Industrial and Systems Engineering",
+        "Email": "reagwall@tamu.edu",
+        "Admission": true
+    },
+    {
+        "Name": "Reed Thorn",
+        "UIN": "631003980",
+        "Grad Semester": "Fall",
+        "Grad Year": 2025,
+        "Major": "Biological and Agricultural Engineering",
+        "Email": "reedthorn@tamu.edu",
+        "Admission": true
+    },
+    {
+        "Name": "Samantha Echegaray",
+        "UIN": "529009086",
+        "Grad Semester": "Fall",
+        "Grad Year": 2024,
+        "Major": "Chemical Engineering",
+        "Email": "sechegaray@tamu.edu",
+        "Admission": true
+    },
+    {
+        "Name": "Zach Holcomb",
+        "UIN": "513002104",
+        "Grad Semester": "Fall",
+        "Grad Year": 2023,
+        "Major": "Industrial and Systems Engineering",
+        "Email": "zholcomb@tamu.edu",
+        "Admission": true
+    }
+]
