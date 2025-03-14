@@ -1,0 +1,29 @@
+[
+    {
+        "Name": "Abigail Rajagopal",
+        "UIN": "930004421",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "Aerospace Engineering",
+        "Email": "abigailr@tamu.edu",
+        "Admission": true
+    },
+    {
+        "Name": "Aryan Sharma",
+        "UIN": "530002837",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "Multidisciplinary Engineering",
+        "Email": "aryvnsharma@tamu.edu",
+        "Admission": true
+    },
+    {
+        "Name": "Lara Soldi",
+        "UIN": "430003915",
+        "Grad Semester": "Spring",
+        "Grad Year": 2024,
+        "Major": "General Engineering",
+        "Email": "lara.soldi@tamu.edu",
+        "Admission": true
+    }
+]

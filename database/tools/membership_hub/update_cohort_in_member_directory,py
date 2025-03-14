@@ -1,0 +1,41 @@
+import csv, sys
+import pandas as pd
+
+def add_cohort_to_member_directory(cohort_csv, md):
+    cohort_data = []
+    
+    with open(cohort_csv, 'r', encoding='utf-8') as f:
+        for row in csv.DictReader(f):
+            cohort_data.append(row)
+
+    for item in cohort_data:
+        #get admitted applicant's name and uin
+        uin = str(item['uin'])
+        cohort_sem = str(item['cohort_sem'])
+        cohort_year = int(item['cohort_year'])
+
+        print(f"Got admission data of {uin} - {cohort_sem} {cohort_year}")
+
+        md.loc[md['uin'] == uin, 'cohort_sem'] = cohort_sem
+        md.loc[md['uin'] == uin, 'cohort_year'] = cohort_year
+    return md
+
+def main():
+    cohort_file = "../../data/cohort.csv"
+    member_directory = "../../data/member_directory_updated_uin.csv"
+
+    md = pd.read_csv(member_directory, dtype={'uin': str})
+
+    #create uin column
+    md['cohort_sem'] = 'N/A'
+    md['cohort_sem'] = md['cohort_sem'].astype(str)
+    md['cohort_year'] = 0
+
+    print("Processing cohort")
+    md = add_cohort_to_member_directory(cohort_file, md)
+    print(f"Process complete")
+
+    md.to_csv("../../data/member_directory_updated_cohort.csv", index=False)
+
+if __name__ == "__main__":
+    main()

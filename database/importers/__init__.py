@@ -7,6 +7,7 @@ from importers.question_importer import QuestionImporter
 from importers.application_importer import ApplicationImporter
 from importers.applicant_importer import ApplicantImporter
 from importers.application_question_importer import AppQuestionImporter
+from importers.member_importer import MemberImporter
 
 IMPORT_ORDER = [
     CommitteeImporter,
@@ -16,7 +17,8 @@ IMPORT_ORDER = [
     QuestionImporter,
     ApplicationImporter,
     ApplicantImporter,
-    AppQuestionImporter
+    AppQuestionImporter,
+    MemberImporter
 ]
 
 __all__ = [
@@ -29,5 +31,6 @@ __all__ = [
     'ApplicationImporter',
     'ApplicantImporter',
     'AppQuestionImporter',
+    'MemberImporter',
     'IMPORT_ORDER'
 ]

@@ -80,10 +80,12 @@ def main():
             # os.path.join(args.data_dir, "Spring_2024_NM_App.json"),
             # os.path.join(args.data_dir, "Fall_2023_NM_App.json"),
             # os.path.join(args.data_dir, "Spring_2023_NM_App.json"),
-            os.path.join(args.data_dir, "Fall_2022_NM_App.json"),
-            os.path.join(args.data_dir, "Spring_2022_NM_App.json")
+            # os.path.join(args.data_dir, "Fall_2022_NM_App.json"),
+            # os.path.join(args.data_dir, "Spring_2022_NM_App.json"),
+            os.path.join(args.data_dir, "Fall_2021_NM_App.json")
         ],
-        'AppQuestionImporter': [os.path.join(args.data_dir, "question.json")]
+        'AppQuestionImporter': [os.path.join(args.data_dir, "question.json")],
+        'MemberImporter': [os.path.join(args.data_dir, "member_directory.csv")]
     }
 
     #track success
